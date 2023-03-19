@@ -278,7 +278,7 @@
 </html>
 <!-- 
 // search
-
+// start
 var keys =
         ["Albania",
             "Algeria",
@@ -477,26 +477,30 @@ let thing = keys[Math.floor(Math.random() * keys.length)] +" and "+ keys[Math.fl
 
 document.getElementById("sb_form_q").value=thing;
 document.getElementById("sb_form_go").click();
+// end
  -->
 
 
 <!-- 
 // quiz
+// start
 
 let random = Math.floor(Math.random()*3);
 let option = document.querySelectorAll(".b_hPanel");
 let cbtn = document.querySelector('.cbtn');
 option[random].click();
 cbtn.click();
+// end
 
 // document.querySelector('.cbtn').click();
 // document.querySelectorAll(".b_hPanel"); 
-
 -->
 
 
 <!-- 
 // 8 opt
+// start
+
 let op = ['rqAnswerOption0',
           'rqAnswerOption1',
           'rqAnswerOption2',
@@ -516,23 +520,28 @@ let optsel = option.getAttribute("iscorrectoption");
 if (optsel == 'True'){
 	option.click();
 }
-
+// end
 -->
 
 
 
 <!-- 
 // 4opt
+// start
+
 let op = ['rqAnswerOption0','rqAnswerOption1','rqAnswerOption2','rqAnswerOption3'];
 let random = Math.floor(Math.random()*4);
 document.getElementById(op[random]).click(); 
-
+// end
 -->
 
 
 <!--
 // thisOrThat
+// start
+
 let op = ['rqAnswerOption0','rqAnswerOption1'];
 let random = Math.floor(Math.random()*2);
 document.getElementById(op[random]).click();
+// end
 -->
