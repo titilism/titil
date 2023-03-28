@@ -1,5 +1,3 @@
-
- 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,12 +11,33 @@
     body {
         height: 80vh;
         background: cyan;
+        position:relative;
+        padding:0;
+        margin:0;
+    }
+
+    .container{
+        height:400px;
+        width:350px;
+        position:absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translate(-50%,0);
+        border: 0px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
+     img{
+        height:100vh;
+        position:absolute;
+        top:0;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    
     .go {
         height: 100px;
         width: 300px;
@@ -41,11 +60,13 @@
 </style>
 
 <body>
+    <img src="https://github.com/titilism/titil/blob/main/bg.jpg?raw=true"/>
+    <div class="container">
     <p id="points"></p>
     <input class="go" type="button" onclick="points(10)" value="30 or 50">
     <input class="go" type="button" onclick="points(20)" value="60 or 100">
     <input class="go" type="button" onclick="points(70)" value="90 or 150">
-
+    </div>
 </body>
 <script>
     var keys =
@@ -276,272 +297,3 @@
 </script>
 
 </html>
-<!-- 
-// search
-// start
-var keys =
-        ["Albania",
-            "Algeria",
-            "Andorra",
-            "Angola",
-            "Antigua and Barbuda",
-            "Argentina",
-            "Armenia",
-            "Australia",
-            "Austria",
-            "Azerbaijan",
-            "Bahamas",
-            "Bahrain",
-            "Bangladesh",
-            "Barbados",
-            "Belarus",
-            "Belgium",
-            "Belize",
-            "Benin",
-            "Bhutan",
-            "Bolivia",
-            "Bosnia and Herzegovina",
-            "Botswana",
-            "Brazil",
-            "Brunei",
-            "Bulgaria",
-            "Burkina Faso",
-            "Burundi",
-            "Cambodia",
-            "Cameroon",
-            "Canada",
-            "Cape Verde",
-            "Central African Republic",
-            "Chad",
-            "Chile",
-            "China",
-            "Colombi",
-            "Comoros",
-            "Congo (Brazzaville)",
-            "Congo",
-            "Costa Rica",
-            "Cote d'Ivoire",
-            "Croatia",
-            "Cuba",
-            "Cyprus",
-            "Czech Republic",
-            "Denmark",
-            "Djibouti",
-            "Dominica",
-            "Dominican Republic",
-            "East Timor (Timor Timur)",
-            "Ecuador",
-            "Egypt",
-            "El Salvador",
-            "Equatorial Guinea",
-            "Eritrea",
-            "Estonia",
-            "Ethiopia",
-            "Fiji",
-            "Finland",
-            "France",
-            "Gabon",
-            "Gambia, The",
-            "Georgia",
-            "Germany",
-            "Ghana",
-            "Greece",
-            "Grenada",
-            "Guatemala",
-            "Guinea",
-            "Guinea-Bissau",
-            "Guyana",
-            "Haiti",
-            "Honduras",
-            "Hungary",
-            "Iceland",
-            "India",
-            "Indonesia",
-            "Iran",
-            "Iraq",
-            "Ireland",
-            "Israel",
-            "Italy",
-            "Jamaica",
-            "Japan",
-            "Jordan",
-            "Kazakhstan",
-            "Kenya",
-            "Kiribati",
-            "Korea, North",
-            "Korea, South",
-            "Kuwait",
-            "Kyrgyzstan",
-            "Laos",
-            "Latvia",
-            "Lebanon",
-            "Lesotho",
-            "Liberia",
-            "Libya",
-            "Liechtenstein",
-            "Lithuania",
-            "Luxembourg",
-            "Macedonia",
-            "Madagascar",
-            "Malawi",
-            "Malaysia",
-            "Maldives",
-            "Mali",
-            "Malta",
-            "Marshall Islands",
-            "Mauritania",
-            "Mauritius",
-            "Mexico",
-            "Micronesia",
-            "Moldova",
-            "Monaco",
-            "Mongolia",
-            "Morocco",
-            "Mozambique",
-            "Myanmar",
-            "Namibia",
-            "Nauru",
-            "Nepal",
-            "Netherlands",
-            "New Zealand",
-            "Nicaragua",
-            "Niger",
-            "Nigeria",
-            "Norway",
-            "Oman",
-            "Pakistan",
-            "Palau",
-            "Panama",
-            "Papua New Guinea",
-            "Paraguay",
-            "Peru",
-            "Philippines",
-            "Poland",
-            "Portugal",
-            "Qatar",
-            "Romania",
-            "Russia",
-            "Rwanda",
-            "Saint Kitts and Nevis",
-            "Saint Lucia",
-            "Saint Vincent",
-            "Samoa",
-            "San Marino",
-            "Sao Tome and Principe",
-            "Saudi Arabia",
-            "Senegal",
-            "Serbia and Montenegro",
-            "Seychelles",
-            "Sierra Leone",
-            "Singapore",
-            "Slovakia",
-            "Slovenia",
-            "Solomon Islands",
-            "Somalia",
-            "South Africa",
-            "Spain",
-            "Sri Lanka",
-            "Sudan",
-            "Suriname",
-            "Swaziland",
-            "Sweden",
-            "Switzerland",
-            "Syria",
-            "Taiwan",
-            "Tajikistan",
-            "Tanzania",
-            "Thailand",
-            "Togo",
-            "Tonga",
-            "Trinidad and Tobago",
-            "Tunisia",
-            "Turkey",
-            "Turkmenistan",
-            "Tuvalu",
-            "Uganda",
-            "Ukraine",
-            "United Arab Emirates",
-            "United Kingdom",
-            "United States",
-            "Uruguay",
-            "Uzbekistan",
-            "Vanuatu",
-            "Vatican City",
-            "Venezuela",
-            "Vietnam",
-            "Yemen",
-            "Zambia",
-            "Zimbabwe"];
-
-let thing = keys[Math.floor(Math.random() * keys.length)] +" and "+ keys[Math.floor(Math.random() * keys.length)] +" and "+ keys[Math.floor(Math.random() * keys.length)];
-
-document.getElementById("sb_form_q").value=thing;
-document.getElementById("sb_form_go").click();
-// end
- -->
-
-
-<!-- 
-// quiz
-// start
-
-let random = Math.floor(Math.random()*3);
-let option = document.querySelectorAll(".b_hPanel");
-let cbtn = document.querySelector('.cbtn');
-option[random].click();
-cbtn.click();
-// end
-
-// document.querySelector('.cbtn').click();
-// document.querySelectorAll(".b_hPanel"); 
--->
-
-
-<!-- 
-// 8 opt
-// start
-
-let op = ['rqAnswerOption0',
-          'rqAnswerOption1',
-          'rqAnswerOption2',
-          'rqAnswerOption3',
-          'rqAnswerOption4',
-          'rqAnswerOption5',
-          'rqAnswerOption6',
-          'rqAnswerOption7' 
-	 ];
- 
-let random = Math.floor(Math.random()*8);
-
-let option = document.getElementById(op[random]);
-
-let optsel = option.getAttribute("iscorrectoption");
-
-if (optsel == 'True'){
-	option.click();
-}
-// end
--->
-
-
-
-<!-- 
-// 4opt
-// start
-
-let op = ['rqAnswerOption0','rqAnswerOption1','rqAnswerOption2','rqAnswerOption3'];
-let random = Math.floor(Math.random()*4);
-document.getElementById(op[random]).click(); 
-// end
--->
-
-
-<!--
-// thisOrThat
-// start
-
-let op = ['rqAnswerOption0','rqAnswerOption1'];
-let random = Math.floor(Math.random()*2);
-document.getElementById(op[random]).click();
-// end
--->
