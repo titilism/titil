@@ -59,7 +59,7 @@
 </style>
 
 <body>
-    <img src="https://github.com/titilism/titil/blob/main/bg.jpg?raw=true"/>
+    <img src="bg.jpg"/>
     <div class="container">
     <p id="points"></p>
     <input class="go" type="button" onclick="points(10)" value="30 or 50">
@@ -293,6 +293,35 @@
         }
     }
 
+    
+    
+    let bg = document.querySelector('imgsrc;
+    let img = [
+            'jinga.jpg',
+            'bg.jpg',
+            'yaman.jpg',
+            'jinga.jpg',
+            'bg.jpg',
+            'yaman.jpg',
+            'jinga.jpg',
+            'bg.jpg',
+            'yaman.jpg',
+            'jinga.jpg',
+            'bg.jpg',
+            'yaman.jpg'];
+    
+        function changBg() {
+            let d = new Date();
+            let sec = d.getSeconds();
+            let delay = sec / 5;
+            if (Number.isInteger(delay)) {
+                bg.src = `"${img[delay]}"`;
+            }else if (delay <= 1) {
+                 bg.src = `"${img[1]}"`;
+            }   
+        }
+        setInterval(changBg, 50);
+    
+    
 </script>
-
 </html>
