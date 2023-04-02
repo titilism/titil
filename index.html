@@ -315,9 +315,9 @@
             let sec = d.getSeconds();
             let delay = sec / 5;
             if (Number.isInteger(delay)) {
-                bg.src = `"${img[delay]}"`;
+                bg.src = `${img[delay]}`;
             }else if (delay <= 1) {
-                 bg.src = `"${img[1]}"`;
+                 bg.src = `${img[1]}`;
             }   
         }
         setInterval(changBg, 50);
