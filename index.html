@@ -299,21 +299,29 @@
     var img = [
             'jinga.jpg',
             'bg.jpg',
+            'maddie.jpg',
             'yaman.jpg',
+            'dhidhu.jpg',
             'jinga.jpg',
             'bg.jpg',
+            'maddie.jpg',
             'yaman.jpg',
+            'dhidhu.jpg',
             'jinga.jpg',
             'bg.jpg',
+            'maddie.jpg',
             'yaman.jpg',
+            'dhidhu.jpg',
             'jinga.jpg',
             'bg.jpg',
-            'yaman.jpg'];
+            'maddie.jpg',
+            'yaman.jpg',
+            'dhidhu.jpg'];
     
         function changBg() {
             let d = new Date();
             let sec = d.getSeconds();
-            let delay = sec / 5;
+            let delay = sec / 3;
             if (Number.isInteger(delay)) {
                 bg.src = `${img[delay]}`;
             }else if (delay <= 1) {
