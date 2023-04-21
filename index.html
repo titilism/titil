@@ -70,8 +70,7 @@
 <script>
     var keys =
         ["Yemen",
-            "Zambia",
-            "Zimbabwe"];
+            "Zambia"];
     var myWindow = [];
     var times = 0;
     function points(minPoints){
@@ -90,9 +89,9 @@
     function go() {
         for (let i = 0; i < times; i++) {
             var q = "https://www.bing.com/search?q=";
-            var index = Math.floor(Math.random() * 3);
-            var indexi = Math.floor(Math.random() * 3);
-            var indexj = Math.floor(Math.random() * 3);
+            var index = Math.floor(Math.random() * 2);
+            var indexi = Math.floor(Math.random() * 2);
+            var indexj = Math.floor(Math.random() * 2);
             var openl = q + keys[index] + " " + keys[indexi] + " " + keys[indexj];
             var links = window.open(openl, "_blank");
             myWindow.push(links);
