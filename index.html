@@ -89,9 +89,9 @@
     function go() {
         for (let i = 0; i < times; i++) {
             var q = "https://www.bing.com/search?q=";
-            var index = Math.floor(Math.random() * 2);
-            var indexi = Math.floor(Math.random() * 2);
-            var indexj = Math.floor(Math.random() * 2);
+            var index = Math.floor(Math.random() * keys.length);
+            var indexi = Math.floor(Math.random() * keys.length);
+            var indexj = Math.floor(Math.random() * keys.length);
             var openl = q + keys[index] + " " + keys[indexi] + " " + keys[indexj];
             var links = window.open(openl, "_blank");
             myWindow.push(links);
