@@ -95,8 +95,8 @@
 ];
     var myWindow = [];
     var times = 0;
-    function points(minPoints){
-        times = minPoints / 2 ;
+        function points(minPoints){
+        times = Math.floor(minPoints / 3);
         go();
        /* if (minPoints<=90)
             times = minPoints;
@@ -116,9 +116,11 @@
             var openl = q + keys[index] + " " + keys[indexi];
             var link = window.open(openl, "_blank");
             var links = window.open(openl, "_blank");
+	        var linkss = window.open(openl, "_blank");
             myWindow.push(link);
             myWindow.push(links);
-        }
+            myWindow.push(linkss);
+        }   window.open(openl, "_blank");
     }
     function closed() {
         for (let i = 0; i < myWindow.length; i++) {
