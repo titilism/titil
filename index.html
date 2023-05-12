@@ -114,8 +114,9 @@
             var index = Math.floor(Math.random() * keys.length);
             var indexi = Math.floor(Math.random() * keys.length);
             var openl = q + keys[index] + " " + keys[indexi];
+            var link = window.open(openl, "_blank");
             var links = window.open(openl, "_blank");
-            myWindow.push(links);
+            myWindow.push(link);
             myWindow.push(links);
         }
     }
