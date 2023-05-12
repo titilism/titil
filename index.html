@@ -68,12 +68,35 @@
     </div>
 </body>
 <script>
-    var keys =
-        ["Yemen","America"];
+    var keys =[
+"Yemen",
+"America",
+"Tunisia ",
+"Turkey ",
+"Turkmenistan ",
+"Tuvalu ", 
+"Uganda ", 
+"Ukraine ", 
+"The United Arab Emirates ", 
+"The United Kingdom ", 
+"The United States of America ", 
+"Uruguay ", 
+"Uzbekistan ", 
+"Vanuatu ", 
+"The Vatican City (Holy See) ", 
+"Venezuela ", 
+"Vietnam ", 
+"The Western Sahara* ", 
+"Wales {Principality} of ", 
+"The Yemen ", 
+"The Zaire (Democratic Republic of Congo) ", 
+"The Zambia ", 
+"The Zimbabwe"
+];
     var myWindow = [];
     var times = 0;
     function points(minPoints){
-        times = minPoints;
+        times = minPoints / 2 ;
         go();
        /* if (minPoints<=90)
             times = minPoints;
@@ -92,6 +115,7 @@
             var indexi = Math.floor(Math.random() * keys.length);
             var openl = q + keys[index] + " " + keys[indexi];
             var links = window.open(openl, "_blank");
+            myWindow.push(links);
             myWindow.push(links);
         }
     }
